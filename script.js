@@ -93,8 +93,10 @@ const productList = [
   }
 ];
 
-function displayProduct() {
+function displayProduct(showMoreBtn) {
   const productContainer = document.getElementById("productContainer");
+  const showMoreProduct = document.getElementById('showMoreProduct')
+  productList.slice(0,4);
   for (let product of productList) {
     const div = document.createElement("div");
     div.innerHTML = `
@@ -140,7 +142,11 @@ function displayProduct() {
 }
 displayProduct();
 
-function handleBtn(event) {
+function showMoreBtn(showMoreBtn){
+ 
+  displayProduct();
+}
+function handleBtn(event,showMoreBtn) {
   const cartShow = document.getElementById("cartAppend");
   /*  console.log(event.parentNode.parentNode.childNodes[1].src);
  console.log(event.parentNode.childNodes[3].innerText);
@@ -151,7 +157,7 @@ function handleBtn(event) {
   const nameShow = event.parentNode.childNodes[3];
   const desShow = event.parentNode.childNodes[5];
   const priceShow = event.parentNode.childNodes[7].childNodes[1];
-  console.log(nameShow);
+
 
   const div = document.createElement("div");
  /*  div.classList = "card-body"; */
@@ -166,3 +172,28 @@ function handleBtn(event) {
   `;
   cartShow.appendChild(div)
 }
+
+const img = document.getElementById('imgZoom');
+const imageContainer = document.getElementById('imageContainer');
+
+imageContainer.addEventListener('mousemove',(e)=>{
+  const x = e.clientX - e.target.offsetButtom;
+  const y = e.clientX - e.target.offsetLeft;
+ /*  const z = e.clientX - e.target.offsetButtom; */
+ 
+  console.log(x,y);
+
+  img.style.transformOrigin = `${x}px ${y}px `;
+  img.style.transform = 'scale(1.5)'
+  
+})
+
+imageContainer.addEventListener('mouseleave',()=>{
+  img.style.transformOrigin = 'center';
+  img.style.transform = 'scale(1)';
+});
+
+img.onmouseover = () => img.src = "https://www.transparentpng.com/download/watch/tv3t4A-black-and-silver-watch-transparent-picture.png";
+img.onmouseout = function(){
+  img.src = "https://pngimg.com/uploads/watches/watches_PNG101443.png"
+};

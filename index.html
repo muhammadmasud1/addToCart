@@ -101,10 +101,10 @@
               </a>
             </div>
           </div>
-          <div class="hidden sm:block sm:w-1/3 lg:w-3/5 relative items-center my-20">
-            <img
+          <div class="hidden sm:block sm:w-1/3 lg:w-3/5 relative items-center w-full my-20" id="imageContainer">
+            <img id="imgZoom"
               src="https://pngimg.com/uploads/watches/watches_PNG101443.png"
-              class="max-w-xs md:max-w-sm m-auto"
+              class="max-w-xs md:max-w-sm m-auto  transition-all"
             />
           </div>
         </div>
@@ -121,7 +121,7 @@
           
         </div>
         <div class="showMore my-10 text-center">
-          <button class="btn btn-outline btn-secondary">Show More</button>
+          <button id="showMoreProduct" onclick="showMoreBtn()" class="btn btn-outline btn-secondary">Show More</button>
         </div> 
     </main>
 
