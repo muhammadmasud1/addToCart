@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Watch</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
+   
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.0.9/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main class="dark:bg-gray-800 bg-white relative overflow-hidden h-screen">
+      <header class="h-20 sm:h-20 flex items-center z-30 max-w-6xl mx-auto">
+        <div class="container mx-auto px-6 flex items-center justify-between">
+          <div
+            class="uppercase text-gray-800 dark:text-white font-black text-3xl"
+          >
+            Ecommerce
+          </div>
+          <div class="flex items-center">
+            <nav
+              class="font-sen text-gray-800 dark:text-white uppercase text-lg lg:flex items-center hidden"
+            >
+              <a href="index.html" class="py-2 px-6 flex hover:scale-110 transition-all">
+                Home
+              </a>
+              <a href="watch.html" class="py-2 px-6 flex hover:scale-110 transition-all">
+                Watch
+              </a>
+              <a href="#" class="py-2 px-6 flex hover:scale-110 transition-all">
+                Product
+              </a>
+              <a href="#" class="py-2 px-6 flex hover:scale-110 transition-all">
+                Contact
+              </a>
+              <a href="#" class="py-2 px-6 flex hover:scale-110 transition-all">
+                Carrer
+              </a>
+            </nav>
+            <button class="lg:hidden flex flex-col ml-4">
+              <span class="w-6 h-1 bg-gray-800 dark:bg-white mb-1"> </span>
+              <span class="w-6 h-1 bg-gray-800 dark:bg-white mb-1"> </span>
+              <span class="w-6 h-1 bg-gray-800 dark:bg-white mb-1"> </span>
+            </button>
+          </div>
+        </div>
+
+        <div class="cart px-5">
+          <div class="dropdown dropdown-end z-50">
+            <label tabindex="0" class="btn btn-ghost btn-circle">
+              <div class="indicator">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                  />
+                </svg>
+                <span class="badge badge-sm indicator-item">8</span>
+              </div>
+            </label>
+
+            <div
+              tabindex="0"
+              class="mt-3 z-[1] card card-compact dropdown-content w-96 bg-base-100 shadow"
+            >
+              <div class="card-body" id="cartAppend"></div>
+              <div class="total">
+                <h3 class="font-semibold px-5">Total Items: 8</h3>
+              </div>
+              <div class="card-actions mt-5">
+                <button class="btn btn-primary btn-block">View cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="avatar">
+          <div
+            class="w-8 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2 cursor-pointer"
+          >
+            <img
+              src="https://scontent.fdac157-1.fna.fbcdn.net/v/t39.30808-6/363838911_1285072725508947_1153244988591480522_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHPqrJapauZppg8IcBQa4uJjj4oNPGz6K-OPig08bPor6MNrY063pHDliXi4Z-6UOtFlOLOZ_jL1mifFTEnON5h&_nc_ohc=jhk9cqCdNGQAX9s6ChJ&_nc_ht=scontent.fdac157-1.fna&oh=00_AfCJ02E2NMX5SPP1ypRXldjLU-9JlpiPJP0b8lxyIBh6eQ&oe=655C0DF6"
+            />
+          </div>
+        </div>
+      </header>
+      <div class=" hero min-h-screen flex object-cover" style="background-image: url(image/hero.jpg); object-fit: cover; background-position: center; background-repeat: no-repeat;">
+            <div class=""></div>
+            <div class="hero-content text-left px-16 text-neutral-content">
+              <div class="max-w-md">
+                <div>
+            <h1 class="mb-1 text-5xl text-[#FE3B49] font-bold">Where 
+                                    
+            <span class="text-3xl text-[#E0AB11]">Style Meets &</span></h1>
+                </div>
+                <h1 class="mb-2 text-5xl text-[#E0AB11] font-bold">Precision – 
+                                    
+                        <span class="text-4xl text-[#FE3B49]">Our Watches Tell Your Story.</span></h1>
+                        <p>Timepieces that Transcend Trends, Defining Moments. Dress Your Wrist in Luxury and Precision</p>
+                <button class="btn btn-outline text-white btn-secondary font-semibold mt-5">Get Started</button>
+              </div>
+            </div>
+          </div>
+
+       </div>
+    </main>
+  </body>
+</html>
