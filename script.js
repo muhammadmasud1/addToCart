@@ -79,24 +79,28 @@ const productList = [
       "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Rml0bmVzcyUyMFNtYXJ0JTIwU2NhbGV8ZW58MHx8MHx8fDA%3D",
     productPrice: 49.99,
   },
-    {
+  {
     productName: "Cordless Vacuum Cleaner",
-    productDescription: "Clean every corner of your home with this lightweight and powerful cordless vacuum cleaner.",
-    productImage: "https://plus.unsplash.com/premium_photo-1677234147504-458d296b0113?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    productPrice: 149.99
+    productDescription:
+      "Clean every corner of your home with this lightweight and powerful cordless vacuum cleaner.",
+    productImage:
+      "https://plus.unsplash.com/premium_photo-1677234147504-458d296b0113?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    productPrice: 149.99,
   },
   {
     productName: "Gaming Keyboard",
-    productDescription: "Dominate your gaming sessions with this responsive and customizable gaming keyboard.",
-    productImage: "https://images.unsplash.com/photo-1629429409772-20bcd53917d2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fEdhbWluZyUyMEtleWJvYXJkfGVufDB8fDB8fHww",
-    productPrice: 79.99
-  }
+    productDescription:
+      "Dominate your gaming sessions with this responsive and customizable gaming keyboard.",
+    productImage:
+      "https://images.unsplash.com/photo-1629429409772-20bcd53917d2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fEdhbWluZyUyMEtleWJvYXJkfGVufDB8fDB8fHww",
+    productPrice: 79.99,
+  },
 ];
 
 function displayProduct(showMoreBtn) {
   const productContainer = document.getElementById("productContainer");
-  const showMoreProduct = document.getElementById('showMoreProduct')
-  productList.slice(0,4);
+  const showMoreProduct = document.getElementById("showMoreProduct");
+  productList.slice(0, 4);
   for (let product of productList) {
     const div = document.createElement("div");
     div.innerHTML = `
@@ -142,11 +146,10 @@ function displayProduct(showMoreBtn) {
 }
 displayProduct();
 
-function showMoreBtn(showMoreBtn){
- 
+function showMoreBtn(showMoreBtn) {
   displayProduct();
 }
-function handleBtn(event,showMoreBtn) {
+function handleBtn(event, showMoreBtn) {
   const cartShow = document.getElementById("cartAppend");
   /*  console.log(event.parentNode.parentNode.childNodes[1].src);
  console.log(event.parentNode.childNodes[3].innerText);
@@ -158,9 +161,8 @@ function handleBtn(event,showMoreBtn) {
   const desShow = event.parentNode.childNodes[5];
   const priceShow = event.parentNode.childNodes[7].childNodes[1];
 
-
   const div = document.createElement("div");
- /*  div.classList = "card-body"; */
+  /*  div.classList = "card-body"; */
   div.innerHTML = `
   <div class="body-cart flex gap-5" id="addToCart">
   <img class="w-24 rounded-md" src="${imagesShow}" alt="product">
@@ -170,30 +172,34 @@ function handleBtn(event,showMoreBtn) {
   </div>
 </div>
   `;
-  cartShow.appendChild(div)
+  cartShow.appendChild(div);
 }
+handleBtn()
+const img = document.getElementById("imgZoom");
+const imageContainer = document.getElementById("imageContainer");
 
-const img = document.getElementById('imgZoom');
-const imageContainer = document.getElementById('imageContainer');
-
-imageContainer.addEventListener('mousemove',(e)=>{
+imageContainer.addEventListener("mousemove", (e) => {
   const x = e.clientX - e.target.offsetButtom;
   const y = e.clientX - e.target.offsetLeft;
- /*  const z = e.clientX - e.target.offsetButtom; */
- 
-  console.log(x,y);
+
+  console.log(x, y);
 
   img.style.transformOrigin = `${x}px ${y}px `;
-  img.style.transform = 'scale(1.5)'
-  
-})
-
-imageContainer.addEventListener('mouseleave',()=>{
-  img.style.transformOrigin = 'center';
-  img.style.transform = 'scale(1)';
+  img.style.transform = "scale(1.2)";
 });
 
-img.onmouseover = () => img.src = "https://www.transparentpng.com/download/watch/tv3t4A-black-and-silver-watch-transparent-picture.png";
-img.onmouseout = function(){
-  img.src = "https://pngimg.com/uploads/watches/watches_PNG101443.png"
+imageContainer.addEventListener("mouseleave", () => {
+  img.style.transformOrigin = "center";
+  img.style.transform = "scale(1)";
+});
+
+img.onmouseover = () =>
+  (img.src =
+    "https://www.transparentpng.com/download/watch/tv3t4A-black-and-silver-watch-transparent-picture.png");
+img.onmouseout = function () {
+  img.src = "https://pngimg.com/uploads/watches/watches_PNG101443.png";
 };
+
+/* =====================watch product Showing ===========================*/
+
+

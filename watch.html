@@ -4,11 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Watch</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
-   
-<link href="https://cdn.jsdelivr.net/npm/daisyui@4.0.9/dist/full.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.0.9/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <main class="dark:bg-gray-800 bg-white relative overflow-hidden h-screen">
@@ -23,10 +31,16 @@
             <nav
               class="font-sen text-gray-800 dark:text-white uppercase text-lg lg:flex items-center hidden"
             >
-              <a href="index.html" class="py-2 px-6 flex hover:scale-110 transition-all">
+              <a
+                href="index.html"
+                class="py-2 px-6 flex hover:scale-110 transition-all"
+              >
                 Home
               </a>
-              <a href="watch.html" class="py-2 px-6 flex hover:scale-110 transition-all">
+              <a
+                href="watch.html"
+                class="py-2 px-6 flex hover:scale-110 transition-all"
+              >
                 Watch
               </a>
               <a href="#" class="py-2 px-6 flex hover:scale-110 transition-all">
@@ -93,25 +107,59 @@
           </div>
         </div>
       </header>
-      <div class=" hero min-h-screen flex object-cover" style="background-image: url(image/hero.jpg); object-fit: cover; background-position: center; background-repeat: no-repeat;">
-            <div class=""></div>
-            <div class="hero-content text-left px-16 text-neutral-content">
-              <div class="max-w-md">
-                <div>
-            <h1 class="mb-1 text-5xl text-[#FE3B49] font-bold">Where 
-                                    
-            <span class="text-3xl text-[#E0AB11]">Style Meets &</span></h1>
-                </div>
-                <h1 class="mb-2 text-5xl text-[#E0AB11] font-bold">Precision – 
-                                    
-                        <span class="text-4xl text-[#FE3B49]">Our Watches Tell Your Story.</span></h1>
-                        <p>Timepieces that Transcend Trends, Defining Moments. Dress Your Wrist in Luxury and Precision</p>
-                <button class="btn btn-outline text-white btn-secondary font-semibold mt-5">Get Started</button>
-              </div>
-            </div>
-          </div>
+      <div
+        class="hero min-h-screen flex object-cover"
+        style="
+          background-image: url(image/hero.jpg);
+          object-fit: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        "
+      >
+        <div class=""></div>
+        <div class="hero-content text-left px-16 text-neutral-content">
+          <div class="max-w-md">
+            <div>
+              <h1 class="mb-1 text-5xl text-[#FE3B49] font-bold">
+                Where
 
-       </div>
+                <span class="text-3xl text-[#E0AB11]">Style Meets &</span>
+              </h1>
+            </div>
+            <h1 class="mb-2 text-5xl text-[#E0AB11] font-bold">
+              Precision –
+
+              <span class="text-4xl text-[#FE3B49]"
+                >Our Watches Tell Your Story.</span
+              >
+            </h1>
+            <p>
+              Timepieces that Transcend Trends, Defining Moments. Dress Your
+              Wrist in Luxury and Precision
+            </p>
+            <button
+              class="btn btn-outline text-white btn-secondary font-semibold mt-5"
+            >
+              Get Started
+            </button>
+          </div>
+        </div>
+      </div>
     </main>
+    <div
+    class="text-center my-10 font-extrabold text-transparent text-4xl 
+    bg-clip-text bg-gradient-to-r from-[#FE3B49] to-pink-600"
+  >
+   <h2>Latest Watch</h2>
+  </div>
+  <section class="max-w-7xl  mx-auto">
+    <div id="watchProduct" class=" gap-5 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+    </div>
+  </section>
+     <div class="showMoreButton text-center ">
+      <button class="btn bg-[#EF335C] text-[#fff] btn-md my-14">Show More</button>
+     </div>
+   
+  <script src="watch.js"></script>
   </body>
 </html>
